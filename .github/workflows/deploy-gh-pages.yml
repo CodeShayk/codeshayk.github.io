@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Change to 'master' if needed
+    branches: [ master ]  # Change to 'master' if needed
 
 permissions:
   contents: read
@@ -33,16 +33,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build React app
+      - name: Build with Vite
         run: npm run build
+        # Ensure your package.json has: "build": "vite build"
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload to GitHub Pages
+      - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: ./dist  # Vite default output directory
 
       - name: Deploy to GitHub Pages
         id: deployment
