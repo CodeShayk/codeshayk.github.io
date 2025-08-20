@@ -1,8 +1,9 @@
+# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]  # or master - adjust to your default branch
+    branches: [ main ]  # Change to 'master' if needed
 
 permissions:
   contents: read
@@ -20,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -32,17 +33,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
+      - name: Build React app
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4  # Updated to v4
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # This is the correct GitHub Pages action
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # Updated to v4
+        uses: actions/deploy-pages@v4
