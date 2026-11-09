@@ -37,10 +37,19 @@ export function Books() {
         <section className="section" id="books" aria-labelledby="books-heading">
             <div className="wrap">
                 <h2 className="section__title" id="books-heading">Books</h2>
+                <p className="section__intro">
+                    From Problems to Patterns has two separate series. Each book starts from a real
+                    problem and teaches the pattern that solves it.
+                </p>
+                <ul className="series-nav" aria-label="Series">
+                    {series.map((s) => (
+                        <li key={s.id}><a href={`#series-${s.id}`}>{s.name}</a></li>
+                    ))}
+                </ul>
                 {series.map((s) => (
-                    <div className="series" key={s.id} aria-labelledby={`series-${s.id}`}>
+                    <div className="series" key={s.id} id={`series-${s.id}`} aria-labelledby={`series-${s.id}-title`}>
                         <header className="series__head">
-                            <h3 className="series__title" id={`series-${s.id}`}>{s.name}</h3>
+                            <h3 className="series__title" id={`series-${s.id}-title`}>From Problems to Patterns: {s.name}</h3>
                             <p className="series__blurb">{s.blurb}</p>
                         </header>
                         {books.filter((b) => b.series === s.id).map((b) => (

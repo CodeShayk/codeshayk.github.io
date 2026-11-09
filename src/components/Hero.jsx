@@ -17,9 +17,10 @@ export function Hero({ author }) {
                 <div className="hero__intro">
                     <h1 className="hero__title">From problems to patterns.</h1>
                     <p className="hero__lede">
-                        {author.name} writes practical books for .NET developers on AI engineering,
-                        domain-driven design and event sourcing, and maintains the open source
-                        libraries that go with them.
+                        {author.name} writes From Problems to Patterns, two series of practical .NET
+                        books: the AI Series on building AI applications, and the Developer Series on
+                        patterns such as domain-driven design and event sourcing. He also maintains
+                        the open source libraries that go with them.
                     </p>
                     <p className="hero__actions">
                         <a className="button button--solid" href="#books">Browse the books</a>
