@@ -1,4 +1,4 @@
-import { featured, packages, more } from "../data/data.js";
+import { featured, packages } from "../data/data.js";
 
 export function OpenSource() {
     return (
@@ -50,18 +50,6 @@ export function OpenSource() {
                         </li>
                     ))}
                 </ul>
-
-                <div className="more">
-                    <h3 className="more__title">More on GitHub</h3>
-                    <ul className="more__list">
-                        {more.map((m) => (
-                            <li key={m.name}>
-                                <a href={m.href} rel="noopener">{m.name}</a>
-                                {m.description && <span>{m.description}</span>}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </div>
         </section>
     );

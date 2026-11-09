@@ -199,12 +199,6 @@ a:hover { color: var(--accent); }
 }
 .package__install span { font-size: 0.85rem; color: var(--night-muted); }
 
-.more { margin-top: 3rem; }
-.more__title { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; }
-.more__list { margin-top: 1rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1.25rem 2rem; }
-.more__list li { display: flex; flex-direction: column; gap: 0.15rem; }
-.more__list a { font-weight: 600; width: fit-content; }
-.more__list span { font-size: 0.95rem; color: var(--night-muted); }
 
 /* Footer */
 .footer { padding: 3rem 0 2.5rem; border-top: 1px solid var(--line); }

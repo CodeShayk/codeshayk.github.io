@@ -8,7 +8,7 @@ export const author = {
     bio: "Passionate technocrat and open source advocate with a keen interest in application frameworks.",
     links: [
         { title: "GitHub", href: "https://github.com/CodeShayk" },
-        { title: "LinkedIn", href: "https://linkedin.com/in/CodeShayk" },
+        { title: "LinkedIn", href: "https://www.linkedin.com/in/najaf-shaikh/" },
         { title: "DEV", href: "https://dev.to/codeshayk" },
         { title: "Email", href: "mailto:code.shayk@outlook.com" }
     ]
@@ -140,12 +140,4 @@ export const packages = [
         installNote: "NuGet",
         href: GH + "FeatureOne"
     }
-];
-
-export const more = [
-    { name: "TurboMapper", description: "Object mapping with shallow and deep mapping, a free alternative to AutoMapper.", href: GH + "TurboMapper" },
-    { name: "ApiAggregator", description: "Combine multiple API requests into one aggregated response.", href: GH + "ApiAggregator" },
-    { name: "JSONPredicate", description: "Evaluate string predicate expressions against JSON objects using JSONPath.", href: GH + "JSONPredicate" },
-    { name: "Secure.SAML", description: "Generate signed SAML 2.0 Response messages.", href: GH + "Secure.SAML" },
-    { name: "Parsley.Net", description: "", href: GH + "Parsley.Net" }
 ];
