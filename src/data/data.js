@@ -1,75 +1,152 @@
-const data = {
-    developer: {
-        name: "CØDE SHΔYK",
-        links: [{
-            icon: "📁",
-            href: "https://github.com/CodeShayk",
-            title: "Github"
-        },
-        {
-            icon: "💼",
-            href: "https://linkedin.com/in/CodeShayk",
-            title: "linkedIn"
-        },
-        {
-            icon: "✉️",
-            href: "mailto:code.shayk@outlook.com",
-            title: "Email"
-        }],
-        description: "Platform Architecture & Open Source Enthusiast"
-    },
-    books: [
-        {
-            id: 1,
-            icon: "📘",
-            name: "From Problems to Patterns — Domain-Driven Design and Event Sourcing in .NET",
-            description: "A practical guide to Domain-Driven Design and Event Sourcing in .NET, by Najaf A. Shaikh.",
-            tags: [{ name: "DDD" }, { name: "Event Sourcing" }, { name: ".NET" }],
-            links: [{
-                icon: "🛒",
-                href: "https://www.amazon.com/Problems-Patterns-Domain-Driven-Sourcing-Understanding-ebook/dp/B0GX32V9F1/",
-                title: "Amazon"
-            }]
-        },
-        {
-            id: 2,
-            icon: "📗",
-            name: "Implementing DDD, CQRS and Event Sourcing",
-            description: "The book and code bundle, by Najaf A. Shaikh.",
-            tags: [{ name: "DDD" }, { name: "CQRS" }, { name: "Event Sourcing" }],
-            links: [{
-                icon: "📖",
-                href: "https://leanpub.com/sh/SQXfBoMO",
-                title: "Leanpub"
-            }]
-        }
-    ],
-    projects: [
-        {
-            id: 1,
-            icon: "🔀",
-            name: "SourceFlow.Net",
-            description: "A lightweight, extensible .NET 9 framework for event-sourced applications using DDD and CQRS, with aggregates, sagas, EF Core persistence, event replay and OpenTelemetry support.",
-            tags: [{ name: ".NET 9" }, { name: "DDD" }, { name: "CQRS" }, { name: "Event Sourcing" }],
-            links: [
-                { icon: "💻", href: "https://github.com/CodeShayk/SourceFlow.Net", title: "Code" },
-                { icon: "🏷️", href: "https://github.com/CodeShayk/SourceFlow.Net/releases/latest", title: "Latest release" }
-            ]
-        },
-        {
-            id: 2,
-            icon: "🧪",
-            name: "DD Event Sourcing .NET Samples",
-            description: "Companion code for From Problems to Patterns, with working examples of domain-driven design and event sourcing in .NET.",
-            tags: [{ name: ".NET" }, { name: "DDD" }, { name: "Event Sourcing" }],
-            links: [
-                { icon: "💻", href: "https://github.com/CodeShayk/dd-event-sourcing-dotnet-samples", title: "Code" }
-            ]
-        }
-    ],
-    copyright: {
-        disclaimer: "Copyright (c) 2026  CØDE SHΔYK. Built with ❤️ and hosted on GitHub Pages."
-    }
-}
+const GH = "https://github.com/CodeShayk/";
+const amazonSearch = (title) =>
+    "https://www.amazon.com/s?k=" + encodeURIComponent("Najaf A. Shaikh " + title);
 
-export { data }
+export const author = {
+    name: "Najaf A. Shaikh",
+    role: "Software architect, author and open source maintainer",
+    bio: "Passionate technocrat and open source advocate with a keen interest in application frameworks.",
+    links: [
+        { title: "GitHub", href: "https://github.com/CodeShayk" },
+        { title: "LinkedIn", href: "https://linkedin.com/in/CodeShayk" },
+        { title: "DEV", href: "https://dev.to/codeshayk" },
+        { title: "Email", href: "mailto:code.shayk@outlook.com" }
+    ]
+};
+
+export const series = [
+    {
+        id: "ai",
+        name: "AI Series",
+        blurb: "Build AI applications, agents and retrieval systems on Microsoft's .NET stack."
+    },
+    {
+        id: "dev",
+        name: "Developer Series",
+        blurb: "Learn the patterns behind well-built .NET software, one problem at a time."
+    }
+];
+
+export const books = [
+    {
+        id: "generative-ai",
+        series: "ai",
+        label: "AI Series, Book 1",
+        title: "From Problems to Patterns: Generative AI in .NET",
+        subtitle: "Build Next-Level AI Applications, Agents, and Tools with Microsoft's Modern Ecosystem",
+        edition: "First Edition, 2026",
+        cover: "covers/generative-ai.jpg",
+        overview:
+            "Runnable samples for every section of the book, with a citation index that maps each section to its code. Covers Microsoft.Extensions.AI, RAG, the Agent Framework, MCP and the patterns you need in production.",
+        buy: { href: "https://www.amazon.co.uk/dp/B0H1718649", label: "Buy on Amazon" },
+        repo: "generative-ai-dotnet-samples"
+    },
+    {
+        id: "agentic-ui",
+        series: "ai",
+        label: "AI Series, Book 2",
+        title: "From Problems to Patterns: Agentic UI in .NET",
+        subtitle: "Building Agentic User Interfaces with the AG-UI Protocol in .NET",
+        cover: null,
+        coverTitle: "Agentic UI in .NET",
+        overview:
+            "One solution with a folder per chapter, from a first AG-UI stream to Blazor, MAUI and desktop clients, tool approvals, generative UI and security. Every agent runs without an API key.",
+        buy: { href: amazonSearch("Agentic UI in .NET"), label: "Find on Amazon" },
+        repo: "agentic-ui-dotnet-samples"
+    },
+    {
+        id: "enterprise-rag",
+        series: "ai",
+        label: "AI Series, Book 3",
+        title: "From Problems to Patterns: Enterprise RAG Engineering with .NET",
+        subtitle: "Building Grounded, Secure, and Production-Ready Retrieval-Augmented Generation Systems",
+        cover: "covers/enterprise-rag.jpg",
+        overview:
+            "Runnable code for all 25 chapters in one solution, from a first RAG pipeline through hybrid retrieval, reranking, GraphRAG and security to a capstone. Targets .NET 10.",
+        buy: { href: amazonSearch("Enterprise RAG Engineering with .NET"), label: "Find on Amazon" },
+        repo: "enterprise-rag-dotnet-samples"
+    },
+    {
+        id: "ai-engineer",
+        series: "dev",
+        label: "Developer Series",
+        title: "From .NET Developer to AI Engineer",
+        subtitle: "Build on the skills you already have to integrate, architect and ship reliable AI-powered applications",
+        edition: "First Edition, 2026",
+        cover: "covers/ai-engineer.jpg",
+        overview:
+            "Seventeen chapters of runnable projects that follow one example, the Northwind Assist customer assistant, from a first model call to a production-shaped application.",
+        buy: { href: amazonSearch("From .NET Developer to AI Engineer"), label: "Find on Amazon" },
+        repo: "ai-engineer-dotnet-samples"
+    },
+    {
+        id: "ddd-event-sourcing",
+        series: "dev",
+        label: "Developer Series",
+        title: "From Problems to Patterns: Domain-Driven Design and Event Sourcing in .NET",
+        subtitle: "Understanding the Patterns, One Problem at a Time",
+        edition: "First Edition, 2026",
+        cover: "covers/ddd-event-sourcing.jpg",
+        overview:
+            "Runnable code for all 32 chapters. One Bank Account domain evolves from naive CRUD to a containerised, observable, event-sourced system built on SourceFlow.Net.",
+        buy: {
+            href: "https://www.amazon.com/Problems-Patterns-Domain-Driven-Sourcing-Understanding-ebook/dp/B0GX32V9F1/",
+            label: "Buy on Amazon"
+        },
+        repo: "dd-event-sourcing-dotnet-samples"
+    }
+].map((b) => ({ ...b, repoUrl: GH + b.repo }));
+
+export const featured = {
+    name: "SourceFlow.Net",
+    description:
+        "A lightweight, extensible framework for building event-sourced .NET applications with domain-driven design and CQRS. It provides aggregates, sagas, Entity Framework Core persistence, event replay and OpenTelemetry tracing.",
+    facts: [".NET 9", "DDD", "CQRS", "Event sourcing"],
+    href: GH + "SourceFlow.Net",
+    book: { id: "ddd-event-sourcing", title: "Domain-Driven Design and Event Sourcing in .NET" }
+};
+
+export const packages = [
+    {
+        name: "Abacus Run",
+        description:
+            "A workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
+        facts: [".NET 9"],
+        install: "dotnet add package Abacus.Run --version 1.0.0",
+        installNote: "GitHub Packages feed",
+        href: GH + "Abacus-Run"
+    },
+    {
+        name: "ActiveForge",
+        description:
+            "An Active Record-style ORM for .NET with first-class providers for SQL Server, PostgreSQL and MongoDB.",
+        facts: ["SQL Server", "PostgreSQL", "MongoDB"],
+        install: "dotnet add package ActiveForge.Core",
+        installNote: "NuGet",
+        href: GH + "ActiveForge"
+    },
+    {
+        name: "DataFuse",
+        description:
+            "Like GraphQL, but for your heterogeneous backends. Aggregates SQL databases, REST APIs and other sources into strongly typed objects from declarative configuration.",
+        facts: [".NET 10"],
+        href: GH + "DataFuse.Net"
+    },
+    {
+        name: "FeatureOne",
+        description:
+            "Feature toggles for .NET, with SQL and file storage providers or your own storage backend.",
+        facts: [".NET Standard 2.1", ".NET 9", ".NET 10"],
+        install: "dotnet add package FeatureOne",
+        installNote: "NuGet",
+        href: GH + "FeatureOne"
+    }
+];
+
+export const more = [
+    { name: "TurboMapper", description: "Object mapping with shallow and deep mapping, a free alternative to AutoMapper.", href: GH + "TurboMapper" },
+    { name: "ApiAggregator", description: "Combine multiple API requests into one aggregated response.", href: GH + "ApiAggregator" },
+    { name: "JSONPredicate", description: "Evaluate string predicate expressions against JSON objects using JSONPath.", href: GH + "JSONPredicate" },
+    { name: "Secure.SAML", description: "Generate signed SAML 2.0 Response messages.", href: GH + "Secure.SAML" },
+    { name: "Parsley.Net", description: "", href: GH + "Parsley.Net" }
+];

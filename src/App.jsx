@@ -1,24 +1,19 @@
-import './App.css'
-import {Footer} from "./components/Footer.jsx";
-import {Header} from "./components/Header.jsx";
-import {ProjectGrid} from "./components/ProjectGrid.jsx";
-import {data} from "./data/data.js";
+import { author } from "./data/data.js";
+import { Hero } from "./components/Hero.jsx";
+import { Books } from "./components/Books.jsx";
+import { OpenSource } from "./components/OpenSource.jsx";
+import { Footer } from "./components/Footer.jsx";
 
-function App() {
-
+export default function App() {
     return (
         <>
-            <div className="container">
-                <Header developer = {data.developer}></Header>
-                <h2 className="section-title">Books</h2>
-                <ProjectGrid projects = {data.books} />
-                <h2 className="section-title">Projects</h2>
-                <ProjectGrid projects = {data.projects} />
-                <Footer copyright={data.copyright}></Footer>
-            </div>
+            <a className="skip-link" href="#books">Skip to books</a>
+            <Hero author={author} />
+            <main>
+                <Books />
+                <OpenSource />
+            </main>
+            <Footer author={author} />
         </>
-
     );
-
 }
-export default App
