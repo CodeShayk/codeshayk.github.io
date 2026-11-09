@@ -10,6 +10,9 @@ function App() {
         <>
             <div className="container">
                 <Header developer = {data.developer}></Header>
+                <h2 className="section-title">Books</h2>
+                <ProjectGrid projects = {data.books} />
+                <h2 className="section-title">Projects</h2>
                 <ProjectGrid projects = {data.projects} />
                 <Footer copyright={data.copyright}></Footer>
             </div>
@@ -19,4 +22,3 @@ function App() {
 
 }
 export default App
-
