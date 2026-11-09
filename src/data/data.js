@@ -22,8 +22,8 @@ const data = {
         {
             id: 1,
             icon: "📘",
-            name: "From Problems to Patterns",
-            description: "Domain-Driven Design and Event Sourcing in .NET, by Najaf A. Shaikh.",
+            name: "From Problems to Patterns — Domain-Driven Design and Event Sourcing in .NET",
+            description: "A practical guide to Domain-Driven Design and Event Sourcing in .NET, by Najaf A. Shaikh.",
             tags: [{ name: "DDD" }, { name: "Event Sourcing" }, { name: ".NET" }],
             links: [{
                 icon: "🛒",
