@@ -47,8 +47,7 @@ export const books = [
         label: "AI Series, Book 2",
         title: "From Problems to Patterns: Agentic UI in .NET",
         subtitle: "Building Agentic User Interfaces with the AG-UI Protocol in .NET",
-        cover: null,
-        coverTitle: "Agentic UI in .NET",
+        cover: "covers/agentic-ui.jpg",
         overview:
             "One solution with a folder per chapter, from a first AG-UI stream to Blazor, MAUI and desktop clients, tool approvals, generative UI and security. Every agent runs without an API key.",
         buy: { href: amazonSearch("Agentic UI in .NET"), label: "Find on Amazon" },
