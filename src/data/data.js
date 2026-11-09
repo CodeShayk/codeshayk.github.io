@@ -49,7 +49,7 @@ export const books = [
         cover: "covers/agentic-ui.jpg",
         overview:
             "One solution with a folder per chapter, from a first AG-UI stream to Blazor, MAUI and desktop clients, tool approvals, generative UI and security. Every agent runs without an API key.",
-        buy: { href: amazonSearch("Agentic UI in .NET"), label: "Find on Amazon" },
+        buy: { href: "https://www.amazon.co.uk/Problems-Patterns-Building-Interfaces-Protocol-ebook/dp/B0HMJVHVWB", label: "Buy on Amazon" },
         repo: "agentic-ui-dotnet-samples"
     },
     {
@@ -74,7 +74,7 @@ export const books = [
         cover: "covers/ai-engineer.jpg",
         overview:
             "Seventeen chapters of runnable projects that follow one example, the Northwind Assist customer assistant, from a first model call to a production-shaped application.",
-        buy: { href: amazonSearch("From .NET Developer to AI Engineer"), label: "Find on Amazon" },
+        buy: { href: "https://www.amazon.co.uk/Net-Developer-Engineer-AI-powered-applications-ebook/dp/B0HLTSS8QN", label: "Buy on Amazon" },
         repo: "ai-engineer-dotnet-samples"
     },
     {
