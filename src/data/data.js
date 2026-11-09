@@ -9,7 +9,6 @@ export const author = {
     links: [
         { title: "GitHub", href: "https://github.com/CodeShayk" },
         { title: "LinkedIn", href: "https://www.linkedin.com/in/najaf-shaikh/" },
-        { title: "DEV", href: "https://dev.to/codeshayk" },
         { title: "Email", href: "mailto:code.shayk@outlook.com" }
     ]
 };
