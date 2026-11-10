@@ -108,7 +108,7 @@ export const packages = [
     {
         name: "Abacus Run",
         description:
-            "A workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
+            "An AI enabled workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
         facts: [".NET 9"],
         install: "dotnet add package Abacus.Run --version 1.0.0",
         installNote: "GitHub Packages feed",
