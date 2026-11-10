@@ -134,7 +134,7 @@ const others = [
         name: "FeatureOne",
         description:
             "Feature toggles for .NET, with SQL and file storage providers or your own storage backend.",
-        facts: [".NET Standard 2.1", ".NET 9", ".NET 10"],
+        facts: [".NET Standard 2.1", ".NET 9", ".NET 10", "feature-flag", "conditional-toggles", "multi-providers", "openfeature-compliant"],
         install: "dotnet add package FeatureOne",
         installNote: "NuGet",
         href: GH + "FeatureOne"
