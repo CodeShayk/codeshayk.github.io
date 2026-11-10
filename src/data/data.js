@@ -95,7 +95,7 @@ export const books = [
     }
 ].map((b) => ({ ...b, repoUrl: GH + b.repo }));
 
-export const featured = {
+const sourceFlow = {
     name: "SourceFlow.Net",
     description:
         "A lightweight, extensible framework for building event-sourced .NET applications with domain-driven design and CQRS. It provides aggregates, sagas, Entity Framework Core persistence, event replay and OpenTelemetry tracing.",
@@ -104,7 +104,7 @@ export const featured = {
     book: { id: "ddd-event-sourcing", title: "Domain-Driven Design and Event Sourcing in .NET" }
 };
 
-export const packages = [
+const others = [
     {
         name: "Abacus Run",
         description:
@@ -140,3 +140,5 @@ export const packages = [
         href: GH + "FeatureOne"
     }
 ];
+
+export const libraries = [sourceFlow, ...others];
