@@ -29,16 +29,17 @@ export function OpenSource() {
                                         </p>
                                     )}
                                     {lib.alsoOn && (
-                                        <p className="library__also">
-                                            Also on NuGet:{" "}
-                                            {lib.alsoOn.map((pkg, i) => (
-                                                <span key={pkg.id}>
-                                                    <a href={nugetUrl(pkg.id)} rel="noopener">{pkg.id}</a>
-                                                    {pkg.beta ? " (beta)" : ""}
-                                                    {i < lib.alsoOn.length - 1 ? ", " : ""}
-                                                </span>
-                                            ))}
-                                        </p>
+                                        <div className="library__also">
+                                            <p className="library__also-title">Also on NuGet:</p>
+                                            <ul className="library__also-list">
+                                                {lib.alsoOn.map((pkg) => (
+                                                    <li key={pkg.id}>
+                                                        <a href={nugetUrl(pkg.id)} rel="noopener">{pkg.id}</a>
+                                                        {pkg.beta ? " (beta)" : ""}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     )}
                                 </div>
                                 <div className="library__side">
