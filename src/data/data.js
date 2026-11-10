@@ -32,6 +32,7 @@ export const books = [
         id: "generative-ai",
         series: "ai",
         label: "AI Series, Book 1",
+        badge: { text: "Best Seller", kind: "bestseller" },
         title: "From Problems to Patterns: Generative AI in .NET",
         subtitle: "Build Next-Level AI Applications, Agents, and Tools with Microsoft's Modern Ecosystem",
         edition: "First Edition, 2026",
@@ -57,12 +58,13 @@ export const books = [
         id: "enterprise-rag",
         series: "ai",
         label: "AI Series, Book 3",
+        badge: { text: "Coming Soon", kind: "soon" },
         title: "From Problems to Patterns: Enterprise RAG Engineering with .NET",
         subtitle: "Building Grounded, Secure, and Production-Ready Retrieval-Augmented Generation Systems",
         cover: "covers/enterprise-rag.jpg",
         overview:
             "Runnable code for all 25 chapters in one solution, from a first RAG pipeline through hybrid retrieval, reranking, GraphRAG and security to a capstone. Targets .NET 10.",
-        buy: { href: amazonSearch("Enterprise RAG Engineering with .NET"), label: "Find on Amazon" },
+        buy: null,
         repo: "enterprise-rag-dotnet-samples"
     },
     {

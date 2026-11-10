@@ -5,7 +5,12 @@ function Book({ book }) {
     return (
         <article className="book" id={book.id}>
             <div className="book__text">
-                <p className="book__label">{book.label}</p>
+                <p className="book__label">
+                    {book.label}
+                    {book.badge && (
+                        <span className={`badge badge--${book.badge.kind}`}>{book.badge.text}</span>
+                    )}
+                </p>
                 <h4 className="book__title">{book.title}</h4>
                 <p className="book__byline">
                     By Najaf A. Shaikh{book.edition ? ` · ${book.edition}` : ""}
@@ -13,10 +18,12 @@ function Book({ book }) {
                 <blockquote className="book__subtitle">{book.subtitle}</blockquote>
                 <p className="book__overview">{book.overview}</p>
                 <p className="book__actions">
-                    <a className="button button--solid" href={book.buy.href} rel="noopener">
-                        {book.buy.label}
-                    </a>
-                    <a className="button button--line" href={book.repoUrl} rel="noopener">
+                    {book.buy && (
+                        <a className="button button--solid" href={book.buy.href} rel="noopener">
+                            {book.buy.label}
+                        </a>
+                    )}
+                    <a className={`button ${book.buy ? "button--line" : "button--solid"}`} href={book.repoUrl} rel="noopener">
                         Companion code
                     </a>
                 </p>
