@@ -71,6 +71,7 @@ export const books = [
         id: "ai-engineer",
         series: "dev",
         label: "Developer Series",
+        badge: { text: "Best Seller", kind: "bestseller" },
         title: "From .NET Developer to AI Engineer",
         subtitle: "Build on the skills you already have to integrate, architect and ship reliable AI-powered applications",
         edition: "First Edition, 2026",
