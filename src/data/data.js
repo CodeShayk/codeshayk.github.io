@@ -118,7 +118,7 @@ const others = [
         name: "ActiveForge",
         description:
             "An Active Record-style ORM for .NET with first-class providers for SQL Server, PostgreSQL and MongoDB.",
-        facts: ["SQL Server", "PostgreSQL", "MongoDB", "ORM", "Active Record", "Domain-Driven"],
+        facts: ["ORM", "Active Record", "Domain-Driven", "SQL Server", "PostgreSQL", "MongoDB"],
         install: "dotnet add package ActiveForge.Core",
         installNote: "NuGet",
         href: GH + "ActiveForge"
