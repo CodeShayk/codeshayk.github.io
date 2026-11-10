@@ -10,6 +10,7 @@ function Book({ book }) {
                     {book.badge && (
                         <span className={`badge badge--${book.badge.kind}`}>{book.badge.text}</span>
                     )}
+                    {book.level && <span className="badge badge--level">{book.level}</span>}
                 </p>
                 <h4 className="book__title">{book.title}</h4>
                 <p className="book__byline">

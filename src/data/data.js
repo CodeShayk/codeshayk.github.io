@@ -30,6 +30,7 @@ export const series = [
 export const books = [
     {
         id: "generative-ai",
+        level: "Expert",
         series: "ai",
         label: "AI Series, Book 1",
         badge: { text: "Best Seller", kind: "bestseller" },
@@ -44,6 +45,7 @@ export const books = [
     },
     {
         id: "agentic-ui",
+        level: "Expert",
         series: "ai",
         label: "AI Series, Book 2",
         title: "From Problems to Patterns: Agentic UI in .NET",
@@ -56,6 +58,7 @@ export const books = [
     },
     {
         id: "enterprise-rag",
+        level: "Expert",
         series: "ai",
         label: "AI Series, Book 3",
         badge: { text: "Coming Soon", kind: "soon" },
@@ -69,6 +72,7 @@ export const books = [
     },
     {
         id: "ai-engineer",
+        level: "Advanced",
         series: "dev",
         label: "Developer Series",
         badge: { text: "Best Seller", kind: "bestseller" },
@@ -83,6 +87,7 @@ export const books = [
     },
     {
         id: "ddd-event-sourcing",
+        level: "Advanced",
         series: "dev",
         label: "Developer Series",
         badge: { text: "New Edition in Review", kind: "review" },
