@@ -118,7 +118,7 @@ const others = [
         name: "Abacus Run",
         description:
             "An AI enabled workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
-        facts: [".NET 10", "Agent Runtime", "Workflow Engine", "Human-in-Loop", "Server-Side Events", "Microsoft Agent Framework"],
+        facts: [".NET 10", "Agent Runtime", "Workflow Engine", "Human in Loop", "Server Side Events", "Microsoft Agent Framework"],
         install: "dotnet add package Abacus.Run --version 1.0.0",
         installNote: "GitHub Packages feed",
         href: GH + "Abacus-Run"
@@ -127,7 +127,7 @@ const others = [
         name: "ActiveForge",
         description:
             "An Active Record-style ORM for .NET with first-class providers for SQL Server, PostgreSQL and MongoDB.",
-        facts: ["ORM", "Active Record", "Domain-Driven", "SQL Server", "PostgreSQL", "MongoDB"],
+        facts: ["ORM", "Active Record", "Domain Driven", "SQL Server", "PostgreSQL", "MongoDB"],
         install: "dotnet add package ActiveForge.Core",
         nuget: NUGET + "ActiveForge.Core",
         alsoOn: [
@@ -142,7 +142,7 @@ const others = [
         name: "DataFuse",
         description:
             "Like GraphQL, but for your heterogeneous backends. Aggregates SQL databases, REST APIs and other sources into strongly typed objects from declarative configuration.",
-        facts: [".NET 10", "Data Aggregator", "Query Engine", "Heterogeneous Stores", "Configuration-Driven"],
+        facts: [".NET 10", "Data Aggregator", "Query Engine", "Heterogeneous Stores", "Configuration Driven"],
         href: GH + "DataFuse.Net",
         install: "dotnet add package DataFuse.Integration",
         nuget: NUGET + "DataFuse.Integration",
@@ -158,7 +158,7 @@ const others = [
         name: "FeatureOne",
         description:
             "Feature toggles for .NET, with SQL and file storage providers or your own storage backend.",
-        facts: [".NET Standard 2.1", ".NET 9", ".NET 10", "Feature Flag", "Conditional Toggles", "Multi-Providers", "OpenFeature-Compliant"],
+        facts: [".NET Standard 2.1", ".NET 9", ".NET 10", "Feature Flag", "Conditional Toggles", "Multi Providers", "OpenFeature Compliant"],
         install: "dotnet add package FeatureOne",
         nuget: NUGET + "FeatureOne",
         alsoOn: [
