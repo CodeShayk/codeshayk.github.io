@@ -100,7 +100,7 @@ const sourceFlow = {
     name: "SourceFlow.Net",
     description:
         "A lightweight, extensible framework for building event-sourced .NET applications with domain-driven design and CQRS. It provides aggregates, sagas, Entity Framework Core persistence, event replay and OpenTelemetry tracing.",
-    facts: [".NET 9", "DDD", "CQRS", "Event Sourcing", "Cloud Support"],
+    facts: [".NET 9", "DDD", "CQRS", "Event Sourcing", "Cloud Supported"],
     href: GH + "SourceFlow.Net",
     install: "dotnet add package SourceFlow.Net",
     nuget: NUGET + "SourceFlow.Net",
