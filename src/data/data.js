@@ -6,7 +6,7 @@ const amazonSearch = (title) =>
 export const author = {
     name: "Najaf A. Shaikh",
     role: "Software architect, author and open source maintainer",
-    bio: "Passionate technocrat and open source advocate with a keen interest in generative AI and application frameworks.",
+    bio: "Passionate technocrat and open source advocate with a keen interest in Generative AI and Application Frameworks.",
     links: [
         { title: "GitHub", href: "https://github.com/CodeShayk" },
         { title: "LinkedIn", href: "https://www.linkedin.com/in/najaf-shaikh/" },
