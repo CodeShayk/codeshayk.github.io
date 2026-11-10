@@ -127,7 +127,7 @@ const others = [
         name: "DataFuse",
         description:
             "Like GraphQL, but for your heterogeneous backends. Aggregates SQL databases, REST APIs and other sources into strongly typed objects from declarative configuration.",
-        facts: [".NET 10"],
+        facts: [".NET 10", "data-aggregator", "query-engine", "heterogeneous-stores", "configuration-driven"],
         href: GH + "DataFuse.Net"
     },
     {
