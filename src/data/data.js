@@ -90,7 +90,7 @@ export const books = [
         level: "Advanced",
         series: "dev",
         label: "Developer Series",
-        badge: { text: "New Edition in Review", kind: "review" },
+        badge: { text: "Second Edition in Review", kind: "review" },
         title: "From Problems to Patterns: Domain-Driven Design and Event Sourcing in .NET",
         subtitle: "Understanding the Patterns, One Problem at a Time",
         edition: "First Edition, 2026",
