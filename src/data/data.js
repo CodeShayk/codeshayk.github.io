@@ -99,7 +99,7 @@ const sourceFlow = {
     name: "SourceFlow.Net",
     description:
         "A lightweight, extensible framework for building event-sourced .NET applications with domain-driven design and CQRS. It provides aggregates, sagas, Entity Framework Core persistence, event replay and OpenTelemetry tracing.",
-    facts: [".NET 9", "DDD", "CQRS", "Event sourcing"],
+    facts: [".net 9", "ddd", "cqrs", "event-sourcing"],
     href: GH + "SourceFlow.Net",
     book: { id: "ddd-event-sourcing", title: "Domain-Driven Design and Event Sourcing in .NET" }
 };
@@ -109,7 +109,7 @@ const others = [
         name: "Abacus Run",
         description:
             "An AI enabled workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
-        facts: [".NET 10", "agent-workflow", "human-in-loop", "server-side-events", "microsoft-agent-framework"],
+        facts: [".net 10", "agent-workflow", "human-in-loop", "server-side-events", "microsoft-agent-framework"],
         install: "dotnet add package Abacus.Run --version 1.0.0",
         installNote: "GitHub Packages feed",
         href: GH + "Abacus-Run"
@@ -118,7 +118,7 @@ const others = [
         name: "ActiveForge",
         description:
             "An Active Record-style ORM for .NET with first-class providers for SQL Server, PostgreSQL and MongoDB.",
-        facts: ["SQL Server", "PostgreSQL", "MongoDB", "orm", "active-record", "domain-driven"],
+        facts: ["sql-server", "postgresql", "mongodb", "orm", "active-record", "domain-driven"],
         install: "dotnet add package ActiveForge.Core",
         installNote: "NuGet",
         href: GH + "ActiveForge"
@@ -127,14 +127,14 @@ const others = [
         name: "DataFuse",
         description:
             "Like GraphQL, but for your heterogeneous backends. Aggregates SQL databases, REST APIs and other sources into strongly typed objects from declarative configuration.",
-        facts: [".NET 10", "data-aggregator", "query-engine", "heterogeneous-stores", "configuration-driven"],
+        facts: [".net 10", "data-aggregator", "query-engine", "heterogeneous-stores", "configuration-driven"],
         href: GH + "DataFuse.Net"
     },
     {
         name: "FeatureOne",
         description:
             "Feature toggles for .NET, with SQL and file storage providers or your own storage backend.",
-        facts: [".NET Standard 2.1", ".NET 9", ".NET 10", "feature-flag", "conditional-toggles", "multi-providers", "openfeature-compliant"],
+        facts: [".net standard 2.1", ".net 9", ".net 10", "feature-flag", "conditional-toggles", "multi-providers", "openfeature-compliant"],
         install: "dotnet add package FeatureOne",
         installNote: "NuGet",
         href: GH + "FeatureOne"
