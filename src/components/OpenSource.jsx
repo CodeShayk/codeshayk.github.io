@@ -1,4 +1,4 @@
-import { libraries } from "../data/data.js";
+import { libraries, nugetUrl } from "../data/data.js";
 
 export function OpenSource() {
     return (
@@ -25,7 +25,19 @@ export function OpenSource() {
                                     {lib.install && (
                                         <p className="library__install">
                                             <code>{lib.install}</code>
-                                            <span>{lib.installNote}</span>
+                                            {lib.installNote && <span>{lib.installNote}</span>}
+                                        </p>
+                                    )}
+                                    {lib.alsoOn && (
+                                        <p className="library__also">
+                                            Also on NuGet:{" "}
+                                            {lib.alsoOn.map((pkg, i) => (
+                                                <span key={pkg.id}>
+                                                    <a href={nugetUrl(pkg.id)} rel="noopener">{pkg.id}</a>
+                                                    {pkg.beta ? " (beta)" : ""}
+                                                    {i < lib.alsoOn.length - 1 ? ", " : ""}
+                                                </span>
+                                            ))}
                                         </p>
                                     )}
                                 </div>
@@ -33,9 +45,16 @@ export function OpenSource() {
                                     <ul className="facts">
                                         {lib.facts.map((f) => <li key={f}>{f}</li>)}
                                     </ul>
-                                    <a className="button button--light" href={lib.href} rel="noopener">
-                                        View on GitHub
-                                    </a>
+                                    <div className="library__buttons">
+                                        <a className="button button--light" href={lib.href} rel="noopener">
+                                            View on GitHub
+                                        </a>
+                                        {lib.nuget && (
+                                            <a className="button button--ghost" href={lib.nuget} rel="noopener">
+                                                View on NuGet
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             </article>
                         </li>

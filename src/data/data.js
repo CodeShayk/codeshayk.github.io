@@ -1,4 +1,5 @@
 const GH = "https://github.com/CodeShayk/";
+const NUGET = "https://www.nuget.org/packages/";
 const amazonSearch = (title) =>
     "https://www.amazon.com/s?k=" + encodeURIComponent("Najaf A. Shaikh " + title);
 
@@ -101,6 +102,14 @@ const sourceFlow = {
         "A lightweight, extensible framework for building event-sourced .NET applications with domain-driven design and CQRS. It provides aggregates, sagas, Entity Framework Core persistence, event replay and OpenTelemetry tracing.",
     facts: [".NET 9", "DDD", "CQRS", "Event Sourcing"],
     href: GH + "SourceFlow.Net",
+    install: "dotnet add package SourceFlow.Net",
+    nuget: NUGET + "SourceFlow.Net",
+    alsoOn: [
+        { id: "SourceFlow.Stores.EntityFramework" },
+        { id: "SourceFlow.Cloud.AWS" },
+        { id: "SourceFlow.Cloud.Azure", beta: true },
+        { id: "SourceFlow.Cloud.GCP", beta: true }
+    ],
     book: { id: "ddd-event-sourcing", title: "Domain-Driven Design and Event Sourcing in .NET" }
 };
 
@@ -120,7 +129,13 @@ const others = [
             "An Active Record-style ORM for .NET with first-class providers for SQL Server, PostgreSQL and MongoDB.",
         facts: ["ORM", "Active Record", "Domain-Driven", "SQL Server", "PostgreSQL", "MongoDB"],
         install: "dotnet add package ActiveForge.Core",
-        installNote: "NuGet",
+        nuget: NUGET + "ActiveForge.Core",
+        alsoOn: [
+            { id: "ActiveForge.SqlServer" },
+            { id: "ActiveForge.PostgreSQL" },
+            { id: "ActiveForge.MongoDB" },
+            { id: "ActiveForge.SQLite" }
+        ],
         href: GH + "ActiveForge"
     },
     {
@@ -128,7 +143,16 @@ const others = [
         description:
             "Like GraphQL, but for your heterogeneous backends. Aggregates SQL databases, REST APIs and other sources into strongly typed objects from declarative configuration.",
         facts: [".NET 10", "Data Aggregator", "Query Engine", "Heterogeneous Stores", "Configuration-Driven"],
-        href: GH + "DataFuse.Net"
+        href: GH + "DataFuse.Net",
+        install: "dotnet add package DataFuse.Integration",
+        nuget: NUGET + "DataFuse.Integration",
+        alsoOn: [
+            { id: "DataFuse.Adapters.Abstraction" },
+            { id: "DataFuse.Adapters.SQL" },
+            { id: "DataFuse.Adapters.EntityFramework" },
+            { id: "DataFuse.Adapters.MongoDB" },
+            { id: "DataFuse.Adapters.WebAPI" }
+        ]
     },
     {
         name: "FeatureOne",
@@ -136,9 +160,15 @@ const others = [
             "Feature toggles for .NET, with SQL and file storage providers or your own storage backend.",
         facts: [".NET Standard 2.1", ".NET 9", ".NET 10", "Feature Flag", "Conditional Toggles", "Multi-Providers", "OpenFeature-Compliant"],
         install: "dotnet add package FeatureOne",
-        installNote: "NuGet",
+        nuget: NUGET + "FeatureOne",
+        alsoOn: [
+            { id: "FeatureOne.SQL" },
+            { id: "FeatureOne.File" }
+        ],
         href: GH + "FeatureOne"
     }
 ];
 
 export const libraries = [sourceFlow, ...others];
+
+export const nugetUrl = (id) => NUGET + id;

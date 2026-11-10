@@ -76,6 +76,8 @@ a:hover { color: var(--accent); }
 .button--line { background: transparent; color: var(--ink); }
 .button--line:hover { background: var(--ink); color: var(--paper); }
 .button--light { background: var(--night-text); border-color: var(--night-text); color: var(--night); }
+.button--ghost { background: transparent; border-color: var(--night-line); color: var(--night-text); }
+.button--ghost:hover { background: var(--night-text); border-color: var(--night-text); color: var(--night); }
 .button--light:hover { background: var(--night-accent); border-color: var(--night-accent); color: var(--night); }
 
 /* Hero */
@@ -165,7 +167,7 @@ a:hover { color: var(--accent); }
 /* Open source */
 .section--dark { background: var(--night); color: var(--night-text); }
 .section--dark .section__intro { color: var(--night-muted); }
-.section--dark a:hover { color: var(--night-accent); }
+.section--dark a:not(.button):hover { color: var(--night-accent); }
 
 .libraries { margin-top: clamp(2rem, 5vw, 3rem); display: grid; gap: 1.25rem; }
 .library {
@@ -185,6 +187,9 @@ a:hover { color: var(--accent); }
 }
 .library__install span { font-size: 0.85rem; color: var(--night-muted); }
 .library__side { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+.library__buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.library__also { margin-top: 0.9rem; max-width: var(--measure); font-size: 0.9rem; line-height: 1.7; color: var(--night-muted); }
+.library__also a { color: var(--night-text); }
 
 .facts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .facts li { padding: 0.15rem 0.65rem; border: 1px solid var(--night-line); border-radius: 999px; font-size: 0.85rem; color: var(--night-muted); }
