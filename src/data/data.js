@@ -109,7 +109,7 @@ const others = [
         name: "Abacus Run",
         description:
             "An AI enabled workflow runtime and HTTP host for durable, observable workflows, built on Microsoft Agent Framework. Adds retries, checkpoints, approvals, event history and server-sent events.",
-        facts: [".NET 9"],
+        facts: [".NET 10", "agent-workflow", "human-in-loop", "server-side-events", "microsoft-agent-framework"],
         install: "dotnet add package Abacus.Run --version 1.0.0",
         installNote: "GitHub Packages feed",
         href: GH + "Abacus-Run"
